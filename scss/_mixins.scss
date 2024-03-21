@@ -1,0 +1,35 @@
+@mixin btn(){
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    background-image: linear-gradient(to right , $brand-light, $brand-dark);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover{
+        background-image: linear-gradient(to left , $brand-light, $brand-dark);
+    }
+}
+
+@mixin card(){
+    display: none; //inicia escondido
+    width: 550px;
+    height: 416px;
+    background-color: $black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 75px;
+    box-sizing: border-box;
+
+    @media (max-width: 600px){
+        width: 95%;
+        height: 390px;
+        padding: 65px 30px;
+
+        h1, h2{
+            font-size: 24px !important;
+        }
+
+    }
+}
